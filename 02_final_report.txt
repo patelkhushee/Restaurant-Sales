@@ -1,0 +1,58 @@
+RESTAURANT SALES FORECASTING — FINAL REPORT
+=======================================================
+
+1. RAW DATA PROBLEMS FOUND AND FIXED
+----------------------------------------
+   Total raw rows           : 106,697
+   Rows after cleaning      : 57,784
+
+   Problems fixed:
+   [DATE]     Mixed formats (ISO, US, DD-MM) → parsed with dayfirst=True
+   [BOOLEAN]  13 variants per column (TRUE/Yes/1/Y etc.) → mapped to 0/1
+   [OUTLET]   63 messy names → 12 canonical names
+   [MENU]     56 messy names → 8 canonical names
+   [NEGATIVE] 300 negative units_sold → converted to absolute value
+   [EXTREME]  239 extreme units_sold (>500) → set to NaN
+   [TEMP]     817 impossible temperatures → set to NaN
+   [MISSING]  Filled temperature NaN by month median
+   [MISSING]  Filled units_sold NaN by outlet×item median
+
+2. FEATURES CREATED
+----------------------------------------
+   Total features : 32
+   Calendar       : day_of_week, month, quarter, is_friday, is_monday, is_december
+   Lag features   : lag_1, lag_2, lag_3, lag_7, lag_14, lag_21, lag_30
+   Rolling        : roll_mean_7/14/30, roll_std_7, roll_max_7, roll_min_7, roll_median_7
+   Temperature    : avg_temp, temp_lag_1, temp_above_30
+   Domain flags   : is_weekend, is_holiday, is_summer, is_monsoon
+
+3. MODEL RESULTS
+----------------------------------------
+   Model                          MAE      RMSE   Error %
+   -------------------------------------------------------
+   Linear Regression            350.7     437.8      7.6%  ← WINNER
+   Random Forest                377.8     480.5      8.2%
+   XGBoost                      381.5     490.9      8.3%
+
+   Cross-Validation (5-fold TimeSeriesSplit):
+   Avg MAE = 503.0 ± 69.7
+
+4. BUSINESS IMPACT
+----------------------------------------
+   Average daily sales       : 4601 units
+   Previous error rate       : 30%  (guessing / manual)
+   New error rate (XGBoost) : 8.3%
+   Daily waste BEFORE        : Rs 165,620
+   Daily waste AFTER         : Rs 45,778
+   Estimated annual saving   : Rs 43,742,533 per restaurant
+
+5. OUTPUT FILES
+----------------------------------------
+   outputs/restaurant_sales_clean.csv       Clean dataset
+   outputs/restaurant_features.csv          Feature matrix
+   outputs/charts/01_eda_overview.png        EDA overview (6 charts)
+   outputs/charts/02_outlet_menu_heatmap.png Outlet × item heatmap
+   outputs/charts/07_forecast_vs_actual.png  Forecast vs actual
+   outputs/charts/08_feature_importance.png  Feature importance
+   outputs/charts/09_cleaning_before_after.png Before/After cleaning
+   outputs/models/xgboost_model.pkl          Trained XGBoost model

@@ -1,0 +1,30 @@
+DIAGNOSIS REPORT
+==================================================
+
+Total rows: 106,697
+
+Missing values:
+date              0
+outlet         1645
+day_of_week    2113
+month          1580
+is_weekend     3153
+is_holiday     3215
+is_summer      3215
+is_monsoon     3084
+temperature    3183
+menu_item         0
+units_sold     4297
+
+Dtypes:
+date            object
+outlet          object
+day_of_week     object
+month          float64
+is_weekend      object
+is_holiday      object
+is_summer       object
+is_monsoon      object
+temperature    float64
+menu_item       object
+units_sold     float64
