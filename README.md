@@ -14,16 +14,6 @@ This project builds a data-driven forecasting engine that predicts next-day dema
 
 ---
 
-## 🎯 Business Objectives & KPIs
-
-| Metric | Target |
-|---|---|
-| Mean Absolute Error (MAE) | Minimize |
-| Root Mean Square Error (RMSE) | Minimize |
-| Weekend spike capture | ✅ Required |
-| Seasonal pattern detection | ✅ Required |
-| Long-term growth trend | ✅ Required |
-
 > Accurate forecasting is estimated to drive a **20–30% reduction** in food waste and warehousing costs.
 
 ---
