@@ -106,7 +106,7 @@ restaurant-demand-forecasting/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/restaurant-demand-forecasting.git
+git clone (https://github.com/keshava8769/Restaurant-demand-forecasting-and-inventory-optimization-Ai.git)
 cd restaurant-demand-forecasting
 ```
 
