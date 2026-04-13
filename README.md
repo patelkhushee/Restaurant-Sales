@@ -107,7 +107,7 @@ restaurant-demand-forecasting/
 ### 1. Clone the Repository
 ```bash
 git clone (https://github.com/keshava8769/Restaurant-demand-forecasting-and-inventory-optimization-Ai.git)
-cd restaurant-demand-forecasting
+cd Restaurant-demand-forecasting-and-inventory-optimization-Ai
 ```
 
 ### 2. Install Dependencies
