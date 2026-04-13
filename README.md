@@ -146,7 +146,7 @@ eval: generated forecast vs actuals plot and feature importance chart
 
 ## 👤 Author
 
-**Chenna Keshava, Khushali Chavda, Prem Prajapati**
+**Chenna Keshava, Khushali Chavda, Prem Prajapati, Ashish Gupta**
 Infotact Technical Internship Program — Data Science & Machine Learning
 📍 Bengaluru, Karnataka
 
