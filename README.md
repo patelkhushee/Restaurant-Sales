@@ -106,37 +106,16 @@ restaurant-demand-forecasting/
 
 ### 1. Clone the Repository
 ```bash
-git clone (https://github.com/keshava8769/Restaurant-demand-forecasting-and-inventory-optimization-Ai.git)
+git clone https://github.com/keshava8769/Restaurant-demand-forecasting-and-inventory-optimization-Ai.git
 cd Restaurant-demand-forecasting-and-inventory-optimization-Ai
 ```
 
-### 2. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run Notebooks in Order
+### 2. Run Notebooks in Order
 ```
 notebooks/w1_time_series_eda.ipynb
 notebooks/w2_feature_engineering.ipynb
 notebooks/w3_model_training.ipynb
 notebooks/week4_complete_notebook.ipynb
-```
-
----
-
-## 📁 requirements.txt
-
-```
-pandas
-numpy
-matplotlib
-plotly
-scikit-learn
-xgboost
-prophet
-joblib
-jupyter
 ```
 
 ---
